@@ -1,12 +1,11 @@
+import "dotenv/config";
+
 import cors from "cors";
 import dns from "dns";
-import dotenv from "dotenv";
 import express from "express";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import documentRoutes from "./routes/documentRoutes.js";
-
-dotenv.config();
 
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
@@ -25,6 +24,9 @@ app.get("/", (req, res) => {
     message: "DocVault API is running",
   });
 });
+
+console.log("MAIL_USER:", process.env.MAIL_USER);
+console.log("MAIL_PASSWORD:", process.env.MAIL_PASSWORD ? "loaded" : "MISSING");
 
 const PORT = process.env.PORT || 5000;
 

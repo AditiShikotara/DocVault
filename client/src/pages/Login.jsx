@@ -22,8 +22,7 @@ function Login() {
                 password,
             });
 
-            const { accessToken, refreshToken, user } =
-                response.data.data;
+            const { accessToken, refreshToken, user } = response.data.data;
 
             localStorage.setItem("accessToken", accessToken);
             localStorage.setItem("refreshToken", refreshToken);
@@ -93,8 +92,7 @@ function Login() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="you@example.com"
                                 className="w-full px-4 py-3 border border-slate-300 rounded-xl outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10"
-                                required
-                            />
+                                required />
                         </div>
 
                         <div>
@@ -110,9 +108,15 @@ function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-3 border border-slate-300 rounded-xl outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10"
-                                required
-                            />
+                                required />
                         </div>
+
+                        <Link
+                            to="/forgot-password"
+                            className="text-sm font-medium text-blue-600 hover:text-blue-700"
+                        >
+                            Forgot Password?
+                        </Link>
 
                         <button
                             type="submit"
@@ -141,7 +145,6 @@ function Login() {
                             Create account
                         </Link>
                     </p>
-
                 </div>
 
                 <p className="text-center text-xs text-slate-500 mt-6">
