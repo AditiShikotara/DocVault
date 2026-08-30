@@ -41,7 +41,6 @@ DocVault is a full-stack document management application that allows authenticat
 
 ```text
 DocVault/
-│
 ├── client/
 │   ├── src/
 │   │   ├── components/
@@ -171,5 +170,3 @@ Uploaded files are stored on the server and document metadata is stored in Mongo
 ## 👨‍💻 Author
 
 Built as a full-stack web development project using the MERN stack.
-
-
